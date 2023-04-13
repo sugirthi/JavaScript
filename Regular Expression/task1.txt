@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <input type="text" id="us" name="us" value="" placeholder="Enter a User Name" onkeyup="validation()">
+    <span id="s1"></span>
+</form>
+    <script>
+        function validation()
+        {
+            var pattern=(/^[A-z]{3,30}$/);
+            var user=document.getElementById("us").value;
+            var s1=document.getElementById("s1");
+            if(pattern.test(user))
+            {
+                s1.innerHTML=("username is correct");
+            }
+            else{
+               s1.innerHTML=("username is incorrect");
+            }
+        }
+    </script>
+</body>
+</html>

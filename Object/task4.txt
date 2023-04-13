@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tomato pasta</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        img{
+            width: 50%;
+        }
+        h1{
+            font-family: 'Pacifico', cursive;
+            color: red;
+        }
+        .divul{
+            background-color: rgb(191, 147, 233);
+        }
+    </style>
+</head>
+<body>
+  <div>
+    <h1 id="h1"></h1>
+  </div>
+  <div class="container fluid">
+<div class="row">
+<div class="col-lg-6 col-sm-12">
+  <img id="img"/>
+</div>
+<div class="col-lg-6 col-sm-12 divul">
+  <ul id="li"></ul>
+</div>
+</div>
+  </div>
+    <script>
+        let a = {
+    title: "Tomato Pasta",
+    imgSrc: "https://d1tgh8fmlzexmh.cloudfront.net/ccbp-dynamic-webapps/recipe-img.png",
+    ingredients: ["Pasta", "Oil", "Onions", "Salt", "Tomato Pasta Sauce", "Cheese"]};
+
+    let h1=document.getElementById("h1");
+    let img=document.getElementById("img");
+    let ulist=document.getElementById("li");
+
+    h1.textContent=a.title;
+    img.setAttribute("src",a.imgSrc);
+    for(var i of a.ingredients){
+        var list=document.createElement("li");
+        list.textContent=i;
+        ulist.appendChild(list);
+    }
+    </script>

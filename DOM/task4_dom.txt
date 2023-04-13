@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="task3.css">
+    <title>Document</title>
+    <style>
+        .con1{
+    width:180px;
+    height:330px;
+    background-color: rgb(0, 0, 0);
+    padding:20px;
+    border:2px solid;
+    border-color: beige;
+}
+/* input{
+    margin-bottom:20px;
+} */
+button{
+    border-radius:5px;
+    color: blue;
+}
+    </style>
+</head>
+<body style="color: beige; background-color: black;">
+    <form>
+        <div class="con1">
+        <h3>Sign Up</h3>
+        <label>Username:</label><br/>
+        <input type="text" id="user" name="user" class="user" value="" placeholder="Enter Username" onkeyup="use()" required/><br/>
+        <span id="spn1"></span><br/>
+        <!-- <label>Username:</label></br>
+        <input type="text" id="user" value="" name="user" placeholder="enter a user name" onkeyup="ur()"/></br>
+        <span id="spid"></span> -->
+        <label>Email:</label></br>
+        <input type="text" id="email" value="" name="email" placeholder="enter a email" onkeyup="em()"/></br>
+        <span id="spn2"></span>
+        <label>Password:</label></br>
+        <input type="password" id="pwd" value="" name="pwd" placeholder="enter a password" onkeyup="pass()"/></br>
+        <span id="spn3"></span></br>
+        <label>Confirm Password:</label></br>
+        <input type="password" id="cpwd" value="" name="cpwd" placeholder="Reenter a password" onkeyup="cpass()"/></br>
+        <span id="spn4"></span>
+        <button>Sign Up</button>
+        </div>
+    </form>
+    <script>
+        var sn1=document.getElementById("spn1");
+function use(){
+   us=document.getElementById("user").value;
+   if(us.length>8)
+   {
+       sn1.innerHTML="username must contain 8 characters";
+       sn1.style.color="red";
+   }
+   else{
+       sn1.innerHTML="";
+       
+   }
+}
+var sn2=document.getElementById("spn2");
+function em(){
+   ema=document.getElementById("email").value;
+   if(ema.length>8)
+   {
+       sn2.innerHTML="username must contain 8 characters";
+       sn2.style.color="red";
+   }
+   else{
+       sn1.innerHTML="";
+       
+   }
+}
+
+var sn3=document.getElementById("spn3");
+function pass(){
+   pass=document.getElementById("pwd").value;
+   if(pass.length<8)
+   {
+       sn3.innerHTML="password must be atleast 8 characters";
+       sn3.style.color="red";
+   }
+   else{
+       sn3.innerHTML="";
+       
+   }
+}
+
+var sn4=document.getElementById("spn4");
+function cpass(){
+   cpass=document.getElementById("cpwd").value;
+   if(cpass.length<8)
+   {
+       sn4.innerHTML="please enter password again";
+       sn4.style.color="red";
+   }
+   else{
+       sn4.innerHTML="";
+   }
+}
+    </script>
+
+
+    <!-- <script src="task3.js"></script> -->
+</body>
+</html>

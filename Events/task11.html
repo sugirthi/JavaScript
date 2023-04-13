@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Task 15</title>
+</head>
+<body>
+    <input type="date" id="dob"/>
+    <input type="button" value="Get date" onclick="date()"/>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+        
+    function date(){
+        var dob=document.getElementById("dob").value;
+        var date1=new Date(dob);
+        var date2=new Date(dob);
+        date1.setDate(date1.getDate()+5);
+        date2.setDate(date2.getDate()-5);
+        var a=date1.getDate();
+        var b=date1.getMonth()+1;
+        var c=date1.getFullYear();
+        div1.innerHTML="after 5 days:"+ a+"/"+b+"/"+c;
+        var d=date2.getDate();
+        var e=date2.getMonth()+1;
+        var f=date2.getFullYear();
+        div2.innerHTML="before 5 days:"+ d+"/"+e+"/"+f;
+    }
+
+    </script>
+</body>
+</html>

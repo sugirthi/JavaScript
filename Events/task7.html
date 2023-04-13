@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+       <input type="text" id="inp1" name="inp1" value="" placeholder="enter a first number">
+       <input type="button"  value="integers" onclick="a()">
+       <select id="select1">
+       </select>
+       <input type="button"  value="click" onclick="b()">
+       <select id="select2">
+       </select>
+       <script>
+            function a(){
+            var inp1=document.getElementById("inp1").value;
+            inp1=parseInt(inp1);
+            var sel1=document.getElementById("select1");
+            var opt='<option>choose</option>'  
+                for(var i=0;i<=inp1;i++)
+                {
+                opt+='<option value='+i+'>'+i+'</option>'
+                }
+                sel1.innerHTML=opt;
+            }
+            function b(){
+                var sel1=document.getElementById("select1").value;
+                var ot='<option>choose</option>'  
+                for(var j=0;j<=sel1;j++)
+                {
+                ot+='<option value='+j+'>'+j+'</option>'
+                }
+                document.getElementById("select2").innerHTML=ot;
+            }
+       </script>
+</body>
+</html>

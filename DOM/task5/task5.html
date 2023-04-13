@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div2{
+            width:300px;
+            height:280px;
+            background-color: rgb(230, 90, 230);
+            padding:20px;
+            margin:0 auto;
+            margin-top:160px;
+            border:10px solid rgb(230, 185, 230);
+        }
+        button{
+            width:300px;
+            height:25px;
+        }
+    </style>
+</head>
+<body style="background-color:rgb(102, 1, 94);">
+    <div class="div2">
+    <table>
+    <tr>
+        <td><label>Username:</label></td>
+        <td><input type="text" id="name" name="name" value="" placeholder="Enter name"/></td>
+    </tr>
+    <tr>
+        <td><label>Email:</label></td>
+        <td><input type="text" id="email" value="" name="email" placeholder="Enter a email" /></td>
+    </tr>
+    <tr>
+        <td><label>Password:</label></td>
+        <td><input type="password" id="pwd" value="" name="pwd" /></td>
+    </tr>
+    <tr>
+        <td><label>Phone Number:</label></td>
+        <td><input type="text" id="num" value="" name="num"/></td>
+    </tr>
+    <tr>
+        <td><label>Gender:</label></td>
+        <td><input type="radio" id="gender"  name="gender" value="Male" />male
+        <input type="radio" id="gender" name="gender" value="Female" />female
+        <input type="radio" id="gender" name="gender" value="other" />other</td>
+    </tr>
+    <tr>
+        <td><label>Language:</label></td>
+        <td><select id="sel"  name="sel" value="">
+        <option>select language</option>
+        <option>tamil</option>
+        <option>tamil</option>
+        <option>tamil</option>
+        </select></td></br>
+    </tr>
+    <tr>
+        <td><label>Zip code:</label></td>
+        <td><input type="text" id="code" name="code" value=""/></td>
+    </tr>
+    <tr>
+        <td><label>About:</label></td>
+        <td><textarea id="ta" name="ta" value="">Write about Yourself</textarea></td>
+    </tr>
+    </table>
+    <button id="but" name="but" onclick="register()">Register</button>
+    </div>
+    <div>
+        <h1>Output</h1>
+        <div id="res"></div>
+    </div>
+    <script>
+    var div=document.getElementById("res");
+    function register(){
+    var a=document.getElementById("name").value;
+    var b=document.getElementById("email").value;
+    var c=document.getElementById("pwd").value;
+    var d=document.getElementById("num").value;
+    var e=document.getElementById("sel").value;
+    var f=document.getElementById("code").value;
+    var g=document.getElementById("ta").value;
+    div.innerHTML=a+"<br>"+b+"<br>"+c+"<br>"+d+"<br>"+e+"<br>"+f+"<br>"+g;
+    }
+    </script>
+</body>
+</html>

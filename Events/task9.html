@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="us" value="" placeholder="Enter a User name"/>
+        <input type="date" id="dob" value="" placeholder="Enter a dob"/>
+        <input type="button" value="Create pwd" onclick="createpwd()">
+        <div id="divid"></div>
+    </form>
+    <script>
+        function createpwd(){
+        var inp1=document.getElementById("us").value;
+        var inp2=document.getElementById("dob").value;
+        var div=document.getElementById("divid");
+        var a = inp1.slice(0,4);
+        var date =new Date(inp2);
+        var b =date.getDate();
+        var pwd =a+b; 
+        div.innerHTML="Your password is: "+pwd;
+        }
+    </script>
+</body>
+</html>

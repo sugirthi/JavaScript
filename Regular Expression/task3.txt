@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <input type="text" id="us" name="us" value="" placeholder="Enter a User Name" onkeyup="validation()">
+    <span id="s1"></span>
+    <input type="password" id="pwd" name="pwd" value="" placeholder="Enter a Password" onkeyup="pwd_validation()">
+    <span id="s2"></span>
+    <input type="text" id="mob" name="mob" value="" placeholder="Enter a Phoneno." onkeyup="phone_validation()">
+    <span id="s3"></span>
+</form>
+    <script>
+        function validation()
+        {
+            var pattern=(/^[A-z]{3,30}$/);
+            var user=document.getElementById("us").value;
+            var s1=document.getElementById("s1");
+            if(pattern.test(user))
+            {
+                s1.innerHTML=("username is correct");
+            }
+            else{
+               s1.innerHTML=("username is incorrect");
+            }
+        }
+        function pwd_validation()
+        {
+            var pattern=(/^[A-z0-9@#&]{8}$/);
+            var pwd=document.getElementById("pwd").value;
+            var s2=document.getElementById("s2");
+            // if(pwd.match(pattern))
+            if(pattern.test(pwd))
+            {
+                s2.innerHTML=("Password is correct");
+            }
+            else{
+               s2.innerHTML=("Password is incorrect");
+            }
+        }
+        function phone_validation()
+        {
+            var pattern=(/^[6-9]{1}[0-9]{9}$/);
+            var mob=document.getElementById("mob").value;
+            var s3=document.getElementById("s3");
+            if(pattern.test(mob))
+            {
+                s3.innerHTML=("valid number");
+            }
+            else{
+               s3.innerHTML=("invalid number");
+            }
+        }
+    </script>
+</body>
+</html>
+

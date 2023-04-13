@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1" name="inp1"  value="" placeholder="Enter a data 1">
+    <input type="text" id="inp2" name="inp2"  value="" placeholder="Enter a data 2">
+    <input type="button"  value="click" onclick="a()">
+    <script>
+         function a()
+        {
+            var inp1=document.getElementById("inp1").value;
+            var inp2=document.getElementById("inp1").value;
+            if(inp1==inp2){
+                alert("Datas are equal")
+            }
+            else{
+                alert("Datas are not equal")
+            }
+        }
+    </script>
+</body>
+</html>

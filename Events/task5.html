@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inp1" name="inp1" value="" placeholder="enter a first number">
+    <input type="text" id="inp2" name="inp2" value="" placeholder="enter a second number">
+    <input type="button"  value="click" onclick="a()"><br/>
+    <h3>Output</h3>
+    <span id="sp"></span>
+    <script>
+        function a()
+        {
+            var inp1=document.getElementById("inp1").value;
+            var inp2=document.getElementById("inp2").value;
+            inp1=parseInt(inp1);
+            inp2=parseInt(inp2);
+            var sp=document.getElementById("sp");
+            var add=inp1+inp2;
+            var sub=inp1-inp2;
+            var mul=inp1*inp2;
+            var div=inp1/inp2;
+            var mod=inp1%inp2;
+            sp.innerHTML=("Addition:"+add+"<br>"+"Subraction:"+sub+"<br>"+"multiplication:"+mul+"<br>"+"Division:"+div+"<br>"+"Modulus:"+mod)
+        }
+    </script>
+</body>
+</html>
