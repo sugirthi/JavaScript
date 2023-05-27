@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length converter</title>
+    <style>
+      .div1{
+        background-color: black;
+        color: white;
+        width:300px;
+        height:500px;
+        border-radius: 50px;
+        margin-top:100px;
+        margin-left:40%;
+        border: 5px solid bisque;
+        box-shadow: 7px 0px 10px 0px;
+      }
+      .div2{
+        display: grid;
+        place-items: center;
+        padding-top: 160px;
+      }
+      body{
+        background-color: black;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <div class="div2">
+            <h2 id="msg">cm to inches Calculator</h2><br>
+            <input type = text id="cmval" placeholder="Enter cm value"/><br><br>
+            <button onclick="output()">Submit</button><br><br>
+            <div id="result"></div>
+        </div>
+    </div>
+
+
+    <script>
+    function output(){
+        let cmval=Number(document.getElementById("cmval").value);
+        let inchval = cmval/2.54;
+        let result=document.getElementById("result");
+        result.innerHTML=inchval.toFixed(2)+" inches";
+    }
+    </script>
+</body>
+</html>
